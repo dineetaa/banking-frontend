@@ -1,16 +1,111 @@
-# React + Vite
+# 💳 Banking Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, Revolut-inspired banking frontend built with React. Connects to the Banking API for full banking functionality.
 
-Currently, two official plugins are available:
+**Live App:** `https://bankingfrontend-nu.vercel.app/`  
+**Backend API:** `https://banking-api-wo4z.onrender.com`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Technology |
+|-------|-----------|
+| Framework | React |
+| Styling | CSS (Revolut-inspired dark theme) |
+| Auth | JWT (stored in memory) |
+| Hosting | Vercel |
+| API Communication | HTTP Requests (Fetch API) |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🔐 **Login** — Card number + PIN authentication
+- 💰 **Balance** — View current account balance
+- 💸 **Withdraw** — Transfer money from account
+- ❌ **Close Account** — Delete account permanently
+- 🎨 **Modern UI** — Dark theme, Revolut-inspired design
+
+---
+
+## 🔗 API Connection
+
+The frontend connects to the Banking API at:
+```
+https://banking-api-wo4z.onrender.com
+```
+
+After login, the JWT token is stored **in memory only** (not in localStorage) for security. The token is sent with every request in the Authorization header:
+
+```
+Authorization: Bearer <jwt_token>
+```
+
+---
+
+## 🏃 Running Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+# or
+npm start
+```
+
+App runs at `http://localhost:3000`
+
+> **Note:** Make sure the Banking API is running locally or update the API URL to point to the live Render deployment.
+
+---
+
+## 📁 Project Structure
+
+```
+frontend/
+├── src/
+│   ├── components/      # React components
+│   ├── App.jsx          # Main app component
+│   └── main.jsx         # Entry point
+├── public/
+├── package.json
+└── vite.config.js / package.json
+```
+
+---
+
+## ☁️ Deployment
+
+Deployed on **Vercel** — automatically redeploys on every push to `main` branch.
+
+```bash
+# Push to GitHub to trigger auto-deploy
+git add .
+git commit -m "your message"
+git push
+```
+
+---
+
+## 🔐 Security Notes
+
+- JWT tokens are stored **in memory only** — cleared on page refresh
+- No sensitive data stored in localStorage or cookies
+- All API communication goes through HTTPS
+- Passwords/PINs never stored on the frontend
+
+---
+
+## 🏦 Related
+
+- **Backend Repository:** [banking-api](https://github.com/dineetaa/banking-api)
+- **Live API:** `https://banking-api-wo4z.onrender.com/health`
+
+---
+
+## 👨‍💻 Author
+
+Frontend for the Containerized Microservice Deployment project.
