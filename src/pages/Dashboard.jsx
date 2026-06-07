@@ -580,7 +580,7 @@ export default function Dashboard({ token, onLogout }) {
 
         <nav className="dash-nav">
           <div className="nav-logo">
-            <div className="nav-logo-icon">💳</div>
+            <div className="nav-logo-icon"></div>
             NexBank
           </div>
           <div className="nav-user">
@@ -599,7 +599,7 @@ export default function Dashboard({ token, onLogout }) {
 
                 <div className="card-face card-front">
                   <div className="card-top">
-                    <span className="card-bank-name">NexBank</span>
+                    <span className="card-bank-name">PressBank</span>
                     <div className="card-chip" />
                   </div>
                   <div className="card-balance-section">
