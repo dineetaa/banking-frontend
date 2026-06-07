@@ -6,9 +6,14 @@ const styles = `
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body, html, #root {
+  /* FIX TOTAL: Siguron që dashboard mbulon 100% të ekranit pa hapësira anësore */
+  html, body, #root {
     height: 100%;
     width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    background: #0a0f1e;
   }
 
   .dash-root {
@@ -70,6 +75,7 @@ const styles = `
     font-size: 12px;
     font-weight: 600;
     color: #60a5fa;
+    flex-shrink: 0;
   }
 
   .nav-name {
@@ -104,7 +110,7 @@ const styles = `
     width: 100%;
   }
 
-  /* VIRTUAL CARD - spans full left column */
+  /* VIRTUAL CARD */
   .card-col {
     grid-row: 1 / 3;
     padding: 2.5rem;
@@ -374,7 +380,7 @@ const styles = `
     border: 1px solid #1f2d45;
     border-radius: 10px;
     padding: 13px 16px;
-    font-size: 15px;
+    font-size: 16px; /* KRITIKE PER IPHONE: Ndalon auto-zoom kur preket kutia */
     color: #f9fafb;
     font-family: 'Sora', sans-serif;
     outline: none;
@@ -488,6 +494,57 @@ const styles = `
     font-family: 'Sora', sans-serif;
     color: #6b7280;
     font-size: 14px;
+  }
+
+  /* --- RESPONSIVE OPTIMIZIMI PËR IPHONE & MOBILE --- */
+  @media (max-width: 768px) {
+    .dash-nav {
+      padding: 0 1rem;
+    }
+    
+    .nav-name {
+      display: none; /* Fsheh emrin e plotë në celular për të kursyer hapësirë (mbetet avatari) */
+    }
+
+    .dash-body {
+      grid-template-columns: 1fr; /* Kalon nga 2 kolona në 1 kolonë të vetme */
+      grid-template-rows: auto;
+    }
+
+    .card-col {
+      grid-row: auto;
+      border-right: none;
+      border-bottom: 1px solid #1f2d45; /* Kufiri kalon poshtë kartës */
+      padding: 2rem 1.2rem;
+    }
+
+    .card-3d {
+      height: 210px; /* Pakësuar pak lartësia që të përshtatet bukur në ekrane të ngushta */
+    }
+
+    .card-front, .card-back {
+      padding: 1.5rem;
+    }
+
+    .card-balance-amount {
+      font-size: 28px;
+    }
+
+    .action-panel {
+      padding: 2rem 1.2rem;
+    }
+
+    .danger-panel {
+      padding: 2rem 1.2rem;
+      flex-direction: column; /* Rreshtohet në shtyllë që butoni mos shtypet */
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+
+    .btn-danger {
+      width: 100%;
+      text-align: center;
+    }
   }
 `
 
