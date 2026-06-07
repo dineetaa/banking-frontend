@@ -148,7 +148,7 @@ export default function Login({ onLogin, onSwitch }) {
             <div className="login-left-title">Banking made simple.</div>
             <div className="login-left-sub">Manage your money, track spending,<br />and stay in control — all in one place.</div>
           </div>
-          <div className="login-left-footer">© 2026 NexBank. All rights reserved.</div>
+          <div className="login-left-footer">© 2026 PressBank. All rights reserved.</div>
         </div>
 
         <div className="login-right">

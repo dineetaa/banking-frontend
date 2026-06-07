@@ -581,7 +581,7 @@ export default function Dashboard({ token, onLogout }) {
         <nav className="dash-nav">
           <div className="nav-logo">
             <div className="nav-logo-icon"></div>
-            NexBank
+            PressBank
           </div>
           <div className="nav-user">
             <div className="nav-avatar">{initials}</div>
@@ -627,7 +627,7 @@ export default function Dashboard({ token, onLogout }) {
                       <span className="card-back-cvv-label">CVV</span>
                       <span className="card-back-cvv-val">•••</span>
                     </div>
-                    <div className="card-back-hint">NexBank Checking · Valid Thru 12/28</div>
+                    <div className="card-back-hint">PressBank Checking · Valid Thru 12/28</div>
                   </div>
                 </div>
 
