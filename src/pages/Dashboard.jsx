@@ -49,7 +49,6 @@ const styles = `
   .nav-logo-icon {
     width: 30px;
     height: 30px;
-    background: #2563eb;
     border-radius: 8px;
     display: flex;
     align-items: center;
