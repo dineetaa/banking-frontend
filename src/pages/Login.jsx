@@ -141,7 +141,7 @@ export default function Login({ onLogin, onSwitch }) {
         
         <div className="login-left">
           <div className="login-brand">
-            <div className="login-brand-icon">PressBank</div>
+            <div className="login-brand-icon"></div>
             <span className="login-brand-name">PressBank</span>
           </div>
           <div className="login-left-content">
