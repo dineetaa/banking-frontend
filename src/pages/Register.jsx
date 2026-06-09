@@ -176,7 +176,7 @@ export default function Register({ onSwitch }) {
           </div>
           <div className="login-left-content">
             <div className="login-left-title">Open an account today.</div>
-            <div className="login-left-sub">Join thousands of users managing<br />their finances with NexBank.</div>
+            <div className="login-left-sub">Join thousands of users managing<br />their finances with PressBank.</div>
           </div>
           <div className="login-left-footer">© 2026 PressBank. All rights reserved.</div>
         </div>
